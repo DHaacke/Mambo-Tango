@@ -1,4 +1,4 @@
-# STICKS.LUA for TBS Mambo and Tango 2
+# Sticks.lua for TBS Mambo and Tango 2
  This is a simple but useful Lua script written for the TBS Mambo and Tango 2 radios. Inspired by Lee Schofield's (Painless360) video demonstrating OpenTx's ability to display model comments, the script's sole purpose is to simply provide a scrollable list of common stick commands for Betaflight, HDZero and INAV.  The script is intentionally simple so that non-programmers can feel free to tinker with it, add new sticks command, and otherwise improve it.
 
  Be sure to visit's Painless360's site for some excellent content at [Painless360](https://www.youtube.com/channel/UCp1vASX-fg959vRc1xowqpw)
