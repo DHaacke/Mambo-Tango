@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
---     Inspited by Lee Scholfied  (Painless360)   
---     Scrollable stick commands reference (INAV, Betsflight, HDZero)
+--     Inspired by Lee Scholfied  (Painless360)   
+--     Scrollable stick commands reference (INAV, Betaflight, HDZero)
 --     Version 1.1
 --     Assumes a display resolution of 128 x 64 (Mambo, Tango 2)
 --     Assumes Mode 2
