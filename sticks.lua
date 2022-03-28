@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------
 --     Inspired by Lee Scholfied  (Painless360)   
 --     Scrollable stick commands reference (INAV, Betaflight, HDZero)
---     Version 1.0.1
+--     Version 1.0.2
 --     Assumes a display resolution of 128 x 64 (Mambo, Tango 2)
 --     Assumes Mode 2
 --------------------------------------------------------------------------
@@ -9,8 +9,6 @@
 local currentRow      = 1       -- Betaflight = 1, HDZero = 14, INAV = 20
 local resetRow        = 20
 local maxRows         = 41
-local JOG_WHEEL_CW    = 56832
-local JOG_WHEEL_CCW   = 57088
 
 local function drawStick(x, y, heading, label, currentHeading)
 
@@ -105,19 +103,19 @@ local function processEvents(event)
   if event > 0 then
     lastNumberMessage = event
   end
-  if event == JOG_WHEEL_CW then
+  if event == EVT_VIRTUAL_NEXT then
     lastMessage = "Jog wheel CW"
-    if (currentRow + 1) + 7 <= maxRows then
+    if (currentRow + 11) <= maxRows then
       currentRow = currentRow + 1
     end  
-    killEvents(JOG_WHEEL_CW)
+    killEvents(EVT_VIRTUAL_NEXT)
   end
-  if event ==JOG_WHEEL_CCW then
+  if event == EVT_VIRTUAL_PREV then
     lastMessage = "Jog wheel CCW"
     if (currentRow - 1) > 0 then
       currentRow = currentRow - 1
     end
-    killEvents(JOG_WHEEL_CCW)
+    killEvents(EVT_VIRTUAL_PREV)
   end
   if event == 96 then
     lastMessage = "Menu Button Pressed"

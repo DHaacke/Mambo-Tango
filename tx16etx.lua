@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------
 --     Inspired by Lee Scholfied  (Painless360)   
 --     Scrollable stick commands reference (INAV, Betaflight, HDZero)
---     Version 1.0 BETA
+--     Version 1.1
 --     Assumes a display resolution of 468 x 272 (TX16S, T16, others)
 --     Assumes Mode 2
 --------------------------------------------------------------------------
