@@ -1,3 +1,4 @@
+-- TNS|Stick Command Viewer|TNE
 --------------------------------------------------------------------------
 --     Inspired by Lee Scholfied  (Painless360)   
 --     Scrollable stick commands reference (INAV, Betaflight, HDZero)
