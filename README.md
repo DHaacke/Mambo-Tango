@@ -13,6 +13,10 @@ This is a simple but useful Lua script written for the TBS Mambo and Tango 2 rad
  ## TX16s
  ![Betaflight](TX16S-sticks.bmp)
 
+ ## EdgeTx
+ ![Betaflight](edgetx.bmp)
+
+
 ## Author
 Doug Haacke lives in Billings, Montana and is a lifelong aviation enthusiast and RC pilot, ardent fly fisherman, and senior software developer by trade.
 
