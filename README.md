@@ -16,7 +16,7 @@ This is a simple but useful Lua script written for the TBS Mambo and Tango 2 rad
 ## Author
 Doug Haacke lives in Billings, Montana and is a lifelong aviation enthusiast and RC pilot, ardent fly fisherman, and senior software developer by trade.
 
-Special credit to `Andrzej Roszkowski` for the EdgeTx support!!
+Special credit to `Andrzej Roszkowski` for the EdgeTx support, and to `Peter Feerick` for fixing my numerous typos!!
 
 ## Installation
 
