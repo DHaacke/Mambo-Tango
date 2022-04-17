@@ -73,13 +73,13 @@ local function drawStickCommand(x, y, label, headingLeft, headingRight, isBanner
   stickGutter = 30
 
   if isBanner == true then
-    lcd.drawFilledRectangle(0, row + 2, screenWidth, lineHeight, FORCE)
+    lcd.drawFilledRectangle(0, row + 2, screenWidth, lineHeight, CUSTOM_COLOR)
     -- lcd.drawRectangle(0, row + lineHeight, screenWidth, 2, 0, 1)
-    lcd.setColor(TEXT_COLOR, WHITE)
-    lcd.drawText(x - 12, y, label, MIDSIZE)
-    lcd.setColor(TEXT_COLOR, BLACK)
+    lcd.setColor(CUSTOM_COLOR, WHITE)
+    lcd.drawText(x - 12, y, label, MIDSIZE + CUSTOM_COLOR)
+    lcd.setColor(CUSTOM_COLOR, BLACK)
   else
-    lcd.drawText(x, y, label, MIDSIZE)
+    lcd.drawText(x, y, label, MIDSIZE + CUSTOM_COLOR)
     drawStick(stickCol, y, headingLeft)
     drawStick(stickCol + stickGutter, y, headingRight)
 
