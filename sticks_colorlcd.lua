@@ -1,7 +1,8 @@
+-- TNS|Stick Command Viewer|TNE
 --------------------------------------------------------------------------
 --     Inspired by Lee Scholfied  (Painless360)   
 --     Scrollable stick commands reference (INAV, Betaflight, HDZero)
---     Version 1.0
+--     Version 1.1
 --     Assumes a display resolution of 468 x 272 (TX16S, T16, others)
 --     Assumes Mode 2
 --------------------------------------------------------------------------
@@ -14,8 +15,6 @@ local screenWidth     = LCD_W
 local screenHeight    = LCD_H
 local stickRect       = 22
 local lineHeight      = 24
-local JOG_WHEEL_CW    = 56832
-local JOG_WHEEL_CCW   = 57088
 
 local labelCol        = 24
 local row             = 0
@@ -75,13 +74,13 @@ local function drawStickCommand(x, y, label, headingLeft, headingRight, isBanner
   stickGutter = 30
 
   if isBanner == true then
-    lcd.drawFilledRectangle(0, row + 2, screenWidth, lineHeight, FORCE)
+    lcd.drawFilledRectangle(0, row + 2, screenWidth, lineHeight, CUSTOM_COLOR)
     -- lcd.drawRectangle(0, row + lineHeight, screenWidth, 2, 0, 1)
-    lcd.setColor(TEXT_COLOR, WHITE)
-    lcd.drawText(x - 12, y, label, MIDSIZE)
-    lcd.setColor(TEXT_COLOR, BLACK)
+    lcd.setColor(CUSTOM_COLOR, WHITE)
+    lcd.drawText(x - 12, y, label, MIDSIZE + CUSTOM_COLOR)
+    lcd.setColor(CUSTOM_COLOR, BLACK)
   else
-    lcd.drawText(x, y, label, MIDSIZE)
+    lcd.drawText(x, y, label, MIDSIZE + CUSTOM_COLOR)
     drawStick(stickCol, y, headingLeft)
     drawStick(stickCol + stickGutter, y, headingRight)
 
@@ -97,19 +96,19 @@ local function processEvents(event)
   if event > 0 then
     lastNumberMessage = event
   end
-  if event == JOG_WHEEL_CW then
+  if event == EVT_VIRTUAL_NEXT then
     lastMessage = "Jog wheel CW"
     if (currentRow + 11) <= maxRows then
       currentRow = currentRow + 1
     end  
-    killEvents(JOG_WHEEL_CW)
+    killEvents(EVT_VIRTUAL_NEXT)
   end
-  if event ==JOG_WHEEL_CCW then
+  if event == EVT_VIRTUAL_PREV then
     lastMessage = "Jog wheel CCW"
     if (currentRow - 1) > 0 then
       currentRow = currentRow - 1
     end
-    killEvents(JOG_WHEEL_CCW)
+    killEvents(EVT_VIRTUAL_PREV)
   end
   if event == 96 or event == 1538 then
     lastMessage = "Menu or Jog wheel Button Pressed"
