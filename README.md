@@ -10,11 +10,11 @@ This is a simple but useful Lua script written for the TBS Mambo and Tango 2 rad
  ![INAV](inav1.bmp)
  ![HDZero](hdzero.bmp)
 
- ## TX16s
- ![Betaflight](TX16S-sticks.bmp)
+ ## TX16S (OpenTX)
+ ![OpenTX colorlcd](opentx.bmp)
 
- ## EdgeTx
- ![Betaflight](edgetx.bmp)
+ ## TX16S (EdgeTX)
+ ![EdgeTX colorlcd](edgetx.bmp)
 
 
 ## Author
